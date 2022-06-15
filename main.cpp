@@ -39,7 +39,8 @@ int main()
 		else
 		{
 			system("cls");
-			editor[Element(choice)]->Encoder();
+			int key = Element(choice);
+			editor[key]->Encoder();
 			cout << R"(
 1 - Create
 2 - Open
@@ -50,12 +51,12 @@ int main()
 0 - Exit
 )";
 			cin >> choice;
-			if (choice == "1")editor[Element(choice)]->Create();
-			else if (choice == "2")editor[Element(choice)]->Open();
-			else if (choice == "3")editor[Element(choice)]->Save();
-			else if (choice == "4")editor[Element(choice)]->SaveAs();
-			else if (choice == "5")editor[Element(choice)]->Print();
-			else if (choice == "6")editor[Element(choice)]->Close();
+			if (choice == "1")editor[key]->Create();
+			else if (choice == "2")editor[key]->Open();
+			else if (choice == "3")editor[key]->Save();
+			else if (choice == "4")editor[key]->SaveAs();
+			else if (choice == "5")editor[key]->Print();
+			else if (choice == "6")editor[key]->Close();
 			else if (choice == "0")break;
 			Sleep(3000);
 			system("cls");
