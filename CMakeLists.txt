@@ -3,4 +3,4 @@ project(Creational_design_patterns)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Creational_design_patterns main.cpp "Header1.h")
+add_executable(Creational_design_patterns main.cpp  "create.h" "open.h"    "file.h"  "program.h")
