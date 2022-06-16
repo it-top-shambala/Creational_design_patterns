@@ -6,9 +6,9 @@ class File_TXT : public Editor
 {
 	
 public:
-	void Encoder()
+	void Decoder()
 	{
-		cout << "File .TXT is uploaded!" << endl;
+		cout << "File .TXT is uploaded and decoded!" << endl;
 		//здесь происходит некая расшифровка содержимого файла, декодировка формата
 	}
 };

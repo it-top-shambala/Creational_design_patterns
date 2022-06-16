@@ -6,9 +6,9 @@ class File_DOC : public Editor
 {
 	
 public:
-	void Encoder()
+	void Decoder()
 	{
-		cout << "File .DOC is uploaded!" << endl;
+		cout << "File .DOC is uploaded and decoded!" << endl;
 		//здесь происходит некая расшифровка содержимого файла, декодировка формата
 	}
 };

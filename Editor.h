@@ -17,32 +17,30 @@ using std::string;
 
 class Editor
 {
-
 public:
-	virtual void Encoder() = 0;
-
+	virtual void Decoder() = 0;
 	void Create()
 	{
-		cout << "File was succesfully created!" << endl;
+		//cout << "File was succesfully created!" << endl;
 	}
 	void Open()
 	{
-		cout << "File was succesfully opened!" << endl;
+		//cout << "File was succesfully opened!" << endl;
 	}
 	void Save()
 	{
-		cout << "File was succesfully saved!" << endl;
+		//cout << "File was succesfully saved!" << endl;
 	}
 	void SaveAs()
 	{
-		cout << "File was succesfully saved with a new name!" << endl;
+		//cout << "File was succesfully saved with a new name!" << endl;
 	}
 	void Print()
 	{
-		cout << "File was succesfully printed!" << endl;
+		//cout << "File was succesfully printed!" << endl;
 	}
 	void Close()
 	{
-		cout << "File was succesfully closed!" << endl;
+		//cout << "File was succesfully closed!" << endl;
 	}
 };

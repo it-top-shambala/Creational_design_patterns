@@ -6,9 +6,9 @@ class File_RTF : public Editor
 {
 	
 public:
-	void Encoder()
+	void Decoder()
 	{
-		cout << "File .RTF is uploaded!" << endl;
+		cout << "File .RTF is uploaded and decoded!" << endl;
 		//здесь происходит некая расшифровка содержимого файла, декодировка формата
 	}
 };
