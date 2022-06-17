@@ -6,7 +6,7 @@ class File_TXT : public Editor
 {
 	
 public:
-	File_TXT(string path) : Editor(path) {}
+	File_TXT (string path) : Editor(path) {}
 	void Decoder() override
 	{
 		cout << "File <" << Path << "> is uploaded and decoded!" << endl;
