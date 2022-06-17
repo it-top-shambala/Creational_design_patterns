@@ -19,6 +19,7 @@ int main()
 	Editor* editor = nullptr;
 	EditorHelper* editorhelper = new EditorHelper;
 	bool stop=true;
+	int select = -1;
 	do
 	{
 		cout << "<Documents Editor>\n" << endl;
@@ -35,8 +36,24 @@ int main()
 			system("cls");
 			editor = editorhelper->CheckingPath(path);
 			editor->Decoder();
-			stop = editor->Operations();
-			if(stop)Sleep(2000);
+			cout << endl;
+			do
+			{
+				cout << "Working with file <" << editor->GetPath() << ">" << endl;
+				editor->Operations();
+				cout << "\nContinue working (1), choose another file (2) or exit (0)? "; cin >> select;
+				if (select == 0) stop = false;
+				if (select == 2) 
+				{
+					delete editor; stop = false;
+				}
+				if (select < 0 || select>2) 
+				{
+					cout << "Incorrect input!" << endl; Sleep(2000);
+				}
+				system("cls");
+			} while (stop);
+			if (select == 2) stop = true;
 			system("cls");
 		}
 	} while (stop);

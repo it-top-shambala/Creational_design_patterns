@@ -9,7 +9,7 @@ public:
 	File_RTF (string path) : Editor(path) {}
 	void Decoder() override
 	{
-		cout << "File <" << Path << "> is uploaded and decoded! Object RTF is working!" << endl;
+		cout << "File <" << Path << "> is chosen! Object RTF is working!" << endl;
 		//something magical is happening here!!!
 	}
 };

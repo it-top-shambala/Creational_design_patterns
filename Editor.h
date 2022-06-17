@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using std::cout;
 using std::endl;
@@ -50,7 +51,7 @@ public:
 	{
 		//cout << "File was succesfully closed!" << endl;
 	}
-	bool Operations()
+	void Operations()
 	{
 		int Select = -1;
 		cout << R"(
@@ -60,29 +61,31 @@ public:
 4 - Save As
 5 - Print
 6 - Close
-0 - Exit
 )";
 		cin >> Select;
 		switch (Select)
 		{
-		case 1: Create(); return true;
+		case 1: Create();
 			break;
-		case 2: Open(); return true;
+		case 2: Open();
 			break;
-		case 3: Save(); return true;
+		case 3: Save(); 
 			break;
-		case 4: SaveAs(); return true;
+		case 4: SaveAs();
 			break;
-		case 5: Print(); return true;
+		case 5: Print(); 
 			break;
-		case 6: Close(); return true;
-			break;
-		case 0: return false;
+		case 6: Close(); 
 			break;
 		default:
 			//cout<<"Incorrect input!<<endl;
-			return true;
+			system("cls");
+			Operations();
 			break;
 		}
+	}
+	string GetPath() const
+	{
+		return Path;
 	}
 };
