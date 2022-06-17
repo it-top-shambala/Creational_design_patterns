@@ -1,20 +1,15 @@
 #pragma once
 
 #include <string>
-
-using std::cout;
-using std::endl;
-using std::cin;
-using std::string;
-
 #include "Editor.h"
 #include "File_TXT.h"
 #include "File_RTF.h"
 #include "File_DOC.h"
 
-class EditorHelper : public Editor
+using std::string;
+
+class EditorHelper 
 {
-	void Decoder() override {};
 public:
 	Editor* CheckingPath(string path)
 	{

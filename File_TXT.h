@@ -9,7 +9,7 @@ public:
 	File_TXT (string path) : Editor(path) {}
 	void Decoder() override
 	{
-		cout << "File <" << Path << "> is uploaded and decoded!" << endl;
+		cout << "File <" << Path << "> is uploaded and decoded! Object TXT is working!" << endl;
 		//something magical is happening here!!!
 	}
 };
