@@ -6,9 +6,10 @@ class File_DOC : public Editor
 {
 	
 public:
-	void Decoder()
+	File_DOC(string path) : Editor(path) {}
+	void Decoder() override
 	{
-		cout << "File .DOC is uploaded and decoded!" << endl;
-		//здесь происходит некая расшифровка содержимого файла, декодировка формата
+		cout << "File <" << Path << "> is uploaded and decoded!" << endl;
+		//something magical is happening here!!!
 	}
 };

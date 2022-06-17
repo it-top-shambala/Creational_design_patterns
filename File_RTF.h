@@ -6,9 +6,10 @@ class File_RTF : public Editor
 {
 	
 public:
-	void Decoder()
+	File_RTF (string path) : Editor(path) {}
+	void Decoder() override
 	{
-		cout << "File .RTF is uploaded and decoded!" << endl;
-		//здесь происходит некая расшифровка содержимого файла, декодировка формата
+		cout << "File <" << Path << "> is uploaded and decoded!" << endl;
+		//something magical is happening here!!!
 	}
 };
