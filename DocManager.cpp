@@ -1,4 +1,5 @@
-﻿// DocManager.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+// DocManager.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include "Manager.h"
 #include <vector> //библиотека содержащая класс вектор
@@ -24,7 +25,7 @@ int main()
 "create",     //создать документ
 "open",       //открыть документ
 "save",       //сохранить документ
-"save_n",     //сохранить документ с новым именем
+"save_as",     //сохранить документ с новым именем
 "print",      //напечатать документ
 "close",      //закрыть документ
 "help",       //вывод на экран список команд
@@ -32,10 +33,11 @@ int main()
 
 	Help();
 	cout << endl;
-	int com = 0;
+	int com = 0;//номер задания в векторе заданий
 	do
 	{
-		com = 1;
+		Document Doc;
+		com = 1;//позиция команды в векторе команд
 		string task;//команда
 		cout << "Выберите команду для работы с документом: ";
 		getline(cin, task);// ввод команды
@@ -57,7 +59,7 @@ int main()
 		if (com == 1) { Fun.Create(); continue; };
 		if (com == 2) { Fun.Open(); continue; };
 		if (com == 3) { Fun.Save(); continue; }
-		if (com == 4) { Fun.Save_n(); continue; }
+		if (com == 4) { Fun.Save_as(); continue; }
 		if (com == 5) { Fun.Print(); continue; }
 		if (com == 6) { Fun.Close(); continue; }
 
